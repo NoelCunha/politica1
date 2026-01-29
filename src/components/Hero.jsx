@@ -12,6 +12,10 @@ import React from 'react';
               <div className="inline-block bg-secondary-500 text-primary-900 font-bold px-4 py-1 rounded-full text-sm mb-4">
                 PARTIDO VOZ DO POVO
               </div>
+              <div className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-sm border border-white/20 px-6 py-3 rounded-xl">
+                <span className="text-5xl md:text-7xl font-black text-secondary-500 leading-none">55</span>
+                <span className="text-lg md:text-xl font-bold text-white leading-tight">Vote<br/>Marcelo Cavalcanti</span>
+              </div>
               <h1 className="text-4xl md:text-6xl font-bold leading-tight">
                 Política é servir <br/>
                 <span className="text-secondary-500">quem mais precisa</span>
