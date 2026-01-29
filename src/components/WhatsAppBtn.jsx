@@ -3,17 +3,14 @@ import React from 'react';
 
     const WhatsAppBtn = () => {
       return (
-        <a 
-          href="https://wa.me/5581999990000" 
-          target="_blank" 
+        <a
+          href="https://wa.me/558132996970"
+          target="_blank"
           rel="noopener noreferrer"
-          className="fixed bottom-6 right-6 z-50 bg-green-500 text-white p-4 rounded-full shadow-2xl hover:bg-green-600 hover:scale-110 transition-all duration-300 flex items-center gap-2 group"
+          className="fixed bottom-6 right-6 z-50 bg-green-500 text-white w-14 h-14 rounded-full shadow-2xl hover:bg-green-600 hover:scale-110 transition-all duration-300 flex items-center justify-center"
           aria-label="Fale conosco no WhatsApp"
         >
           <MessageCircle size={28} fill="white" />
-          <span className="max-w-0 overflow-hidden group-hover:max-w-xs transition-all duration-500 ease-in-out whitespace-nowrap font-bold">
-            Fale Conosco
-          </span>
         </a>
       );
     };
