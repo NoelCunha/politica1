@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
     import { Send, MessageSquare, Phone, Mail, MapPin } from 'lucide-react';
-    import candidatoImg from '../assets/candidato.jpeg';
+    import meiDoPovoImg from '../assets/meio-do-povo.jpeg';
 
     const Ombudsman = () => {
       const [formStatus, setFormStatus] = useState('idle');
@@ -25,7 +25,7 @@ import React, { useState } from 'react';
                 <div className="flex items-center gap-5 mb-6">
                   <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-secondary-500 shadow-lg flex-shrink-0">
                     <img
-                      src={candidatoImg}
+                      src={meiDoPovoImg}
                       alt="Marcelo Cavalcanti"
                       className="w-full h-full object-cover object-[center_15%]"
                     />
