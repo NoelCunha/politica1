@@ -5,14 +5,30 @@ import React, { useState } from 'react';
     const Ombudsman = () => {
       const [formStatus, setFormStatus] = useState('idle');
 
-      const handleSubmit = (e) => {
+      const handleSubmit = async (e) => {
         e.preventDefault();
         setFormStatus('sending');
-        // Simulação de envio
-        setTimeout(() => {
+
+        const form = e.target;
+        const data = {
+          nome: form.nome.value,
+          telefone: form.telefone.value,
+          bairro_cidade: form.bairro_cidade.value,
+          assunto: form.assunto.value,
+          mensagem: form.mensagem.value,
+        };
+
+        try {
+          await fetch('https://n11n.ancoraebarros.com/webhook/52f45cb5-dcc2-4578-88a7-fe5600c8c434', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data),
+          });
           setFormStatus('success');
-          e.target.reset();
-        }, 1500);
+          form.reset();
+        } catch {
+          setFormStatus('error');
+        }
       };
 
       return (
@@ -82,23 +98,23 @@ import React, { useState } from 'react';
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-1">Nome Completo</label>
-                    <input required type="text" className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition-all" placeholder="Seu nome" />
+                    <input required name="nome" type="text" className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition-all" placeholder="Seu nome" />
                   </div>
                   
                   <div className="grid grid-cols-2 gap-4">
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-1">Telefone/WhatsApp</label>
-                      <input required type="tel" className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition-all" placeholder="(00) 00000-0000" />
+                      <input required name="telefone" type="tel" className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition-all" placeholder="(00) 00000-0000" />
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-1">Bairro/Cidade</label>
-                      <input required type="text" className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition-all" placeholder="Ex: Ibura, Recife" />
+                      <input required name="bairro_cidade" type="text" className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition-all" placeholder="Ex: Ibura, Recife" />
                     </div>
                   </div>
 
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-1">Assunto</label>
-                    <select className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition-all">
+                    <select name="assunto" className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition-all">
                       <option>Solicitação</option>
                       <option>Denúncia</option>
                       <option>Sugestão de Projeto</option>
@@ -109,17 +125,18 @@ import React, { useState } from 'react';
 
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-1">Mensagem</label>
-                    <textarea required rows="4" className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition-all" placeholder="Como podemos ajudar?"></textarea>
+                    <textarea required name="mensagem" rows="4" className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition-all" placeholder="Como podemos ajudar?"></textarea>
                   </div>
 
                   <button 
                     type="submit" 
                     disabled={formStatus === 'sending' || formStatus === 'success'}
-                    className={`w-full py-3 rounded-lg font-bold text-white flex items-center justify-center gap-2 transition-all ${formStatus === 'success' ? 'bg-green-600' : 'bg-primary-600 hover:bg-primary-700'}`}
+                    className={`w-full py-3 rounded-lg font-bold text-white flex items-center justify-center gap-2 transition-all ${formStatus === 'success' ? 'bg-green-600' : formStatus === 'error' ? 'bg-red-600' : 'bg-primary-600 hover:bg-primary-700'}`}
                   >
                     {formStatus === 'idle' && <><Send size={18} /> Enviar Mensagem</>}
                     {formStatus === 'sending' && 'Enviando...'}
                     {formStatus === 'success' && 'Mensagem Enviada!'}
+                    {formStatus === 'error' && 'Erro ao enviar. Tente novamente.'}
                   </button>
                 </form>
               </div>
