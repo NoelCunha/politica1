@@ -55,7 +55,7 @@ import React from 'react';
                 ))}
               </div>
               <div className="mt-6 text-center">
-                <button className="text-primary-700 font-bold hover:underline">Ver relatório completo no Portal da Transparência &rarr;</button>
+                <a href="https://portaldatransparencia.gov.br/" target="_blank" rel="noopener noreferrer" className="text-primary-700 font-bold hover:underline">Ver relatório completo no Portal da Transparência &rarr;</a>
               </div>
             </div>
           </div>
