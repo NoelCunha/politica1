@@ -3,10 +3,10 @@ import React from 'react';
 
     const Footer = () => {
       return (
-        <footer className="bg-primary-900 text-white pt-16 pb-8">
+        <footer className="bg-primary-900 text-white pt-10 sm:pt-16 pb-8">
           <div className="container-custom">
-            <div className="grid md:grid-cols-4 gap-8 mb-12 border-b border-primary-800 pb-12">
-              <div className="col-span-1 md:col-span-2">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mb-8 sm:mb-12 border-b border-primary-800 pb-8 sm:pb-12">
+              <div className="col-span-1 sm:col-span-2">
                 <h3 className="text-2xl font-bold mb-4">Marcelo Cavalcanti</h3>
                 <p className="text-primary-200 max-w-md mb-6">
                   Deputado Federal pelo Partido Voz do Povo. Trabalhando incansavelmente por um Brasil mais justo e inclusivo.

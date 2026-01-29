@@ -28,12 +28,12 @@ import React from 'react';
       return (
         <section id="bandeiras" className="section-padding bg-primary-900 text-white">
           <div className="container-custom">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4">Nossas Bandeiras</h2>
-              <p className="text-primary-100">Compromissos que guiam nosso mandato em Brasília.</p>
+            <div className="text-center mb-8 sm:mb-12">
+              <h2 className="text-2xl sm:text-3xl font-bold mb-4">Nossas Bandeiras</h2>
+              <p className="text-sm sm:text-base text-primary-100">Compromissos que guiam nosso mandato em Brasília.</p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
               {causes.map((cause, index) => (
                 <div key={index} className="bg-primary-800 p-6 rounded-xl hover:bg-primary-700 transition-colors border border-primary-700">
                   <div className="w-14 h-14 bg-secondary-500 rounded-lg flex items-center justify-center mb-4 shadow-lg">

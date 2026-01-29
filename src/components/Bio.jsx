@@ -6,13 +6,13 @@ import React from 'react';
       return (
         <section id="biografia" className="section-padding bg-white">
           <div className="container-custom">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-primary-900 mb-4">Quem é Marcelo Cavalcanti?</h2>
+            <div className="text-center mb-8 sm:mb-12">
+              <h2 className="text-2xl sm:text-3xl font-bold text-primary-900 mb-4">Quem é Marcelo Cavalcanti?</h2>
               <div className="w-24 h-1 bg-secondary-500 mx-auto"></div>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div className="space-y-6 text-lg text-gray-600">
+            <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+              <div className="space-y-5 sm:space-y-6 text-base sm:text-lg text-gray-600">
                 <p>
                   <strong className="text-primary-700">Marcelo Augusto Cavalcanti Ferreira</strong>, 50 anos, é filho de Seu Augusto, pedreiro, e Dona Fátima, merendeira. Nascido e criado no Ibura, Zona Sul do Recife, conhece de perto a realidade de quem depende do serviço público.
                 </p>
@@ -63,7 +63,7 @@ import React from 'react';
                     className="w-full h-72 object-cover object-[center_20%]"
                   />
                 </div>
-                <div className="bg-gray-100 p-8 rounded-2xl shadow-inner">
+                <div className="bg-gray-100 p-5 sm:p-8 rounded-2xl shadow-inner">
                 <h3 className="text-xl font-bold text-primary-900 mb-6">A História com Pedro</h3>
                 <p className="mb-4 text-gray-700">
                   O diagnóstico de autismo do filho caçula, Pedro, aos 4 anos, foi um divisor de águas na vida de Marcelo.

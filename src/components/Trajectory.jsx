@@ -32,20 +32,20 @@ import React from 'react';
       return (
         <section id="trajetoria" className="section-padding bg-gray-50">
           <div className="container-custom">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-primary-900 mb-4">Trajetória Política</h2>
-              <p className="text-gray-600 max-w-2xl mx-auto">Uma caminhada construída com muito suor e apoio popular, degrau por degrau.</p>
+            <div className="text-center mb-8 sm:mb-12">
+              <h2 className="text-2xl sm:text-3xl font-bold text-primary-900 mb-4">Trajetória Política</h2>
+              <p className="text-sm sm:text-base text-gray-600 max-w-2xl mx-auto">Uma caminhada construída com muito suor e apoio popular, degrau por degrau.</p>
             </div>
 
             <div className="relative">
               {/* Line */}
               <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-primary-200"></div>
 
-              <div className="space-y-8">
+              <div className="space-y-6 sm:space-y-8">
                 {steps.map((step, index) => (
                   <div key={index} className={`flex flex-col md:flex-row items-center ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`}>
                     <div className="flex-1 w-full md:w-1/2 p-4">
-                      <div className={`bg-white p-6 rounded-xl shadow-md border-l-4 border-secondary-500 hover:shadow-lg transition-shadow ${index % 2 === 0 ? 'md:text-left' : 'md:text-right'}`}>
+                      <div className={`bg-white p-4 sm:p-6 rounded-xl shadow-md border-l-4 border-secondary-500 hover:shadow-lg transition-shadow ${index % 2 === 0 ? 'md:text-left' : 'md:text-right'}`}>
                         <span className="inline-block px-3 py-1 bg-primary-100 text-primary-800 rounded-full text-sm font-bold mb-2">
                           {step.year}
                         </span>

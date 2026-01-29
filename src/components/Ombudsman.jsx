@@ -34,7 +34,7 @@ import React, { useState } from 'react';
       return (
         <section id="ouvidoria" className="section-padding bg-gray-100">
           <div className="container-custom">
-            <div className="grid lg:grid-cols-2 gap-12">
+            <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
               
               {/* Info Side */}
               <div>
@@ -47,7 +47,7 @@ import React, { useState } from 'react';
                     />
                   </div>
                   <div>
-                    <h2 className="text-3xl font-bold text-primary-900">Ouvidoria do Povo</h2>
+                    <h2 className="text-2xl sm:text-3xl font-bold text-primary-900">Ouvidoria do Povo</h2>
                     <p className="text-sm text-gray-500 mt-1">Dep. Federal Marcelo Cavalcanti</p>
                   </div>
                 </div>
@@ -89,7 +89,7 @@ import React, { useState } from 'react';
               </div>
 
               {/* Form Side */}
-              <div className="bg-white p-8 rounded-2xl shadow-lg">
+              <div className="bg-white p-5 sm:p-8 rounded-2xl shadow-lg">
                 <h3 className="text-xl font-bold text-gray-900 mb-6 flex items-center gap-2">
                   <MessageSquare className="text-secondary-500" />
                   Envie sua mensagem
@@ -101,7 +101,7 @@ import React, { useState } from 'react';
                     <input required name="nome" type="text" className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition-all" placeholder="Seu nome" />
                   </div>
                   
-                  <div className="grid grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-1">Telefone/WhatsApp</label>
                       <input required name="telefone" type="tel" className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition-all" placeholder="(00) 00000-0000" />

@@ -20,8 +20,8 @@ import React, { useState } from 'react';
               <div className="flex items-center gap-2">
                 <Flag className="h-8 w-8 text-secondary-500" />
                 <div className="flex flex-col">
-                  <span className="font-bold text-xl leading-none">MARCELO CAVALCANTI</span>
-                  <span className="text-xs text-gray-300 tracking-wider">DEPUTADO FEDERAL</span>
+                  <span className="font-bold text-base sm:text-xl leading-none">MARCELO CAVALCANTI</span>
+                  <span className="text-[10px] sm:text-xs text-gray-300 tracking-wider">DEPUTADO FEDERAL</span>
                 </div>
               </div>
               

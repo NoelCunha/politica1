@@ -5,12 +5,12 @@ import React from 'react';
       return (
         <section id="contas" className="section-padding bg-white">
           <div className="container-custom">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-primary-900 mb-4">Prestação de Contas</h2>
-              <p className="text-gray-600">Transparência total. O dinheiro é público e você tem o direito de saber como é usado.</p>
+            <div className="text-center mb-8 sm:mb-12">
+              <h2 className="text-2xl sm:text-3xl font-bold text-primary-900 mb-4">Prestação de Contas</h2>
+              <p className="text-sm sm:text-base text-gray-600">Transparência total. O dinheiro é público e você tem o direito de saber como é usado.</p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8 mb-12">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-8 mb-8 sm:mb-12">
               <div className="bg-gray-50 p-6 rounded-xl border border-gray-200 text-center">
                 <div className="w-12 h-12 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <CheckCircle />
@@ -36,7 +36,7 @@ import React from 'react';
               </div>
             </div>
 
-            <div className="bg-primary-50 rounded-2xl p-8">
+            <div className="bg-primary-50 rounded-2xl p-5 sm:p-8">
               <h3 className="text-xl font-bold text-primary-900 mb-6 flex items-center gap-2">
                 <Calendar className="w-5 h-5" />
                 Últimas Atividades do Gabinete
