@@ -9,7 +9,7 @@ import React from 'react';
           
           <div className="container-custom relative z-10 section-padding flex flex-col md:flex-row items-center gap-12">
             <div className="flex-1 space-y-6 text-center md:text-left">
-              <div className="inline-block bg-secondary-500 text-primary-900 font-bold px-4 py-1 rounded-full text-sm mb-4">
+              <div className="inline-block bg-secondary-500 text-primary-900 font-bold px-4 py-1 rounded-full text-sm">
                 PARTIDO VOZ DO POVO
               </div>
               <div className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-sm border border-white/20 px-6 py-3 rounded-xl">
