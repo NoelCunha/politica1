@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir:*)",
+      "Bash(tree:*)",
+      "Bash(git init:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nInitial commit: Site Deputado Marcelo Cavalcanti\n\nSite de campanha política com React + Vite + Tailwind CSS.\nSeções: Hero, Bio, Trajetória, Bandeiras, Prestação de Contas, Ouvidoria.\nEOF\n)\")",
+      "Bash(git config:*)",
+      "Bash(git remote add:*)",
+      "Bash(git branch:*)",
+      "Bash(git push:*)",
+      "Bash(npm run build:*)",
+      "Bash(npm install)",
+      "Bash(npx vite build)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
