@@ -62,7 +62,7 @@ import React, { useState } from 'react';
                     </div>
                     <div>
                       <h4 className="font-bold text-gray-900">WhatsApp do Gabinete</h4>
-                      <p className="text-gray-600">(81) 99999-0000</p>
+                      <p className="text-gray-600">(81) 3299-6970</p>
                     </div>
                   </div>
 
