@@ -1,6 +1,6 @@
 import React from 'react';
     import { ArrowRight } from 'lucide-react';
-    import candidatoImg from '../assets/candidato.jpeg';
+    import heroImg from '../assets/imagem-unica.jpeg';
 
     const Hero = () => {
       return (
@@ -32,7 +32,7 @@ import React from 'react';
             <div className="flex-1 relative">
               <div className="relative w-72 h-72 md:w-96 md:h-96 mx-auto bg-gradient-to-b from-gray-300 to-gray-400 rounded-full overflow-hidden border-4 border-secondary-500 shadow-2xl">
                  <img
-                   src={candidatoImg}
+                   src={heroImg}
                    alt="Marcelo Cavalcanti"
                    className="w-full h-full object-cover object-[center_15%]"
                  />

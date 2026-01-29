@@ -1,5 +1,6 @@
 import React from 'react';
     import { Facebook, Twitter, Instagram } from 'lucide-react';
+    import meiDoPovoImg from '../assets/meio-do-povo.jpeg';
 
     const Footer = () => {
       return (
@@ -7,6 +8,9 @@ import React from 'react';
           <div className="container-custom">
             <div className="grid md:grid-cols-4 gap-8 mb-12 border-b border-primary-800 pb-12">
               <div className="col-span-1 md:col-span-2">
+                <div className="w-full max-w-sm rounded-xl overflow-hidden mb-4">
+                  <img src={meiDoPovoImg} alt="Marcelo Cavalcanti no meio do povo" className="w-full h-auto object-cover rounded-xl" />
+                </div>
                 <h3 className="text-2xl font-bold mb-4">Marcelo Cavalcanti</h3>
                 <p className="text-primary-200 max-w-md mb-6">
                   Deputado Federal pelo Partido Voz do Povo. Trabalhando incansavelmente por um Brasil mais justo e inclusivo.
